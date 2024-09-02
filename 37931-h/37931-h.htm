@@ -1,0 +1,3129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN'
+  'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Un'avventura di viaggio</title>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .bold       { font-weight: bold }
+  .small-caps { }
+  .gesperrt   { }
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .center     { text-align: center }
+  .right      { text-align: right }
+  .justify    { text-align: justify }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 1.5em 0 }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-inside: avoid;
+                        page-break-after:  avoid }
+  .titlepage, 
+  #pg-header            { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.noindent   { text-indent: 0 }
+
+  .boxed       { border: 1px solid black; padding: 1em }
+  .topic       { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section  { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils  { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+
+  .clearpage,
+  .cleardoublepage,
+  .vfill,
+  .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* ugly hack to give more specifity. 
+   because ADE chokes on !important */
+  .first.first { margin-top: 0 } 
+  .last.last   { margin-bottom: 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                     { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1 { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2 { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3 { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4 { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5 { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.document-title, 
+  p.document-subtitle     { text-align: center }
+
+  div.titlepage,
+  #pg-header,
+  h1.document-title       { margin: 10% 0 5% 0 }
+  p.document-subtitle     { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  p.attribution           { margin-top: 0; text-align: right }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em 10% }
+  div.caption  { margin: 1.5em 10%; text-align: center; font-style: italic }
+  div.legend   { margin: 1.5em 10% }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin: 3em 0 }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  div.topic {
+  margin: 3em 0 }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+  table.table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table tr.last        { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table.norules tr             { border-width: 0 }
+  table.table.norules td, 
+  table.table.norules th             { padding: 0.5ex 1em }
+  table.table.norules tr.first td    { padding-top: 1ex }
+  table.table.norules tr.last td     { padding-bottom: 1ex }
+  table.table.norules tr.first th    { padding-top: 1ex }
+  table.table.norules tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  tr.footnote.footnote td, tr.footnote.footnote th { 
+  padding: 0 0.5em 1.5em;
+  }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  em                { font-style: normal }
+  strong            { font-weight: normal }
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  .dropcap          { float: left; }
+  span.dropcap      { margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { margin: 0 0.5em 0 0; }
+
+  /* PAGINATION */
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes, .plainpage
+                      { margin: 10%  0 }
+   .clearpage         { margin: 10% }
+   .cleardoublepage   { margin: 10% }
+   .vfill             { margin:  5% 10% }
+  }
+
+  @media print {
+    /* margin-top disappears after a page-break, thus padding */
+   .frontispiece, .verso, .plainpage, .section.level-2,
+   .clearpage         { page-break-before: always; padding-top: 1px }
+
+   .coverpage, .titlepage, 
+   .contents, .foreword, .preface, .introduction, .dedication, .prologue,
+   .epilogue, .appendix, .glossary, .bibliography, .index, .colophon,
+   .footnotes,
+   .cleardoublepage   { page-break-before: right; padding-top: 1px }
+
+   .vfill             { margin-top: 20% }
+   h2.title           { margin-top: 20% }
+  }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  .pageno       { position: absolute; right: 95%; font: medium sans-serif; }
+  .pageno:after { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref  { float: right }
+  pre           { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <div class="document" id="un-avventura-di-viaggio">
+    <h1 class="document-title level-1 pfirst title">Un'avventura di viaggio</h1><!-- -*- encoding: utf-8 -*- -->
+    <div class="container coverpage">
+      <div class="align-center auto-scaled figure" style="margin-left: 24%; width: 51%"><img style="display: block; width: 100%" alt="images/cover.jpg" src="images/cover.jpg" width="100%" /></div>
+    </div>
+    <div class="container titlepage">
+      <div class="center line-block noindent outermost">
+        <div class="line">
+          <span class="large">ROBERTO BRACCO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="xx-large">TEATRO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="large">VOLUME PRIMO</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          NON FARE AD ALTRI... — LUI LEI LUI —
+        </div>
+        <div class="line">
+          <strong class="bold">UN'AVVENTURA DI VIAGGIO</strong> — UNA DONNA —
+        </div>
+        <div class="line">
+          LE DISILLUSE — DOPO IL VEGLIONE
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">2ª EDIZIONE.</span>
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          REMO SANDRON — Editore
+        </div>
+        <div class="line">
+          &nbsp;
+        </div>
+        <div class="line">
+          <span class="small">Libraio della Real Casa</span>
+        </div>
+        <div class="line">
+          <span class="small">MILANO-PALERMO-NAPOLI</span>
+        </div>
+      </div>
+    </div>
+    <div class="container verso">
+      <p class="center pfirst">PROPRIETÀ LETTERARIA</p>
+      <blockquote class="small">
+        <div>
+          <p class="pfirst"><em class="italics">I diritti di riproduzione e di traduzione sono riservati per tutti i paesi, non escluso il Regno di Svezia e quello di Norvegia.</em></p>
+          <p class="pnext">È assolutamente proibito di rappresentare questi lavori senza il consenso scritto dell'Autore <em class="italics">(Art. 14 del Testo Unico 17 Settembre 1882)</em>.</p>
+          <p class="pnext">Published in Palermo, 10th. June Privilege of Copyright in the United States reserved under the Act approved March 3rd. 1905, by Roberto Bracco and Remo Sandron.</p>
+          <p class="pnext">Off. Tip. Sandron — 126 — I — 290312.</p>
+        </div>
+      </blockquote>
+    </div>
+    <hr class="docutils" />
+    <div class="clearpage"></div>
+    <div class="center line-block noindent outermost">
+      <div class="line">
+        <span class="invisible pageno target" title="87" id="page-87"></span><span class="x-large">UN'AVVENTURA DI VIAGGIO.</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        <span class="italics large">Commedia in un atto</span>
+      </div>
+      <div class="line">
+        &nbsp;
+      </div>
+      <div class="line">
+        Rappresentata per la prima volta da <span class="small-caps">Pia Marchi</span>, nel 1887.
+      </div>
+    </div>
+    <div class="clearpage"></div>
+    <p class="pnext"><span class="invisible pageno target" title="88" id="page-88"></span> <span class="invisible pageno target" title="89" id="page-89"></span></p>
+    <p class="center large pnext">PERSONAGGI:</p>
+    <blockquote class="small">
+      <div>
+        <div class="large line-block outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Francesco</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Bianca</span>.
+          </div>
+          <div class="line">
+            <span class="small-caps">Fifì</span>.
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+          <div class="line">
+            A Roma — Epoca attuale.
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pnext"><span class="invisible pageno target" title="90" id="page-90"></span> <span class="invisible pageno target" title="91" id="page-91"></span></p>
+    <div class="level-2 section" id="atto-unico">
+      <h2 class="center level-2 pfirst section-title title">ATTO UNICO.</h2>
+      <p class="pfirst"><em class="italics">Una camera destinata alle galanterie e agli affari. Due porte laterali. Una finestra alla parete di fondo. Molta eleganza civettuola. Seggiole a sdraio, soffici divani, cuscini larghi e morbidi, tappeti e drapperie abbondanti. — Un tavolinetto grazioso. — Sul tavolinetto, alle pareti, da per tutto, ninnoli, stampe antiche, ricordi e fotografie di donne. — Qualche vaso di fiori. — Bottiglie di vino e di liquori. — Verso il fondo della camera, un paraventino messo di sbieco, che nasconde a metà una toilette, una specchiera, un divanetto e altri mobili, per così dire, opportuni.</em></p>
+      <div class="level-3 section" id="scena-i">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA I.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="carlo-e-fifi">CARLO <em class="italics">e</em> FIFÌ.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(innanzi alla specchiera, dietro il paravento, aggiustandosi il cappello sul capo e badando all'effetto complessivo della sua figurina)</em> Dunque, a stasera, eh?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="92" id="page-92"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(accendendo una sigaretta e guardando lei con familiare compiacenza)</em> A stasera. <em class="italics">(Lunga pausa.)</em> Ma sì, ma sì che va bene!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">No, vieni qua, Fuffino mio. Ti piace più così... <em class="italics">(variando la posizione del cappello)</em> o così?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(le va vicino)</em> Aspetta. Fammi vedere.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ripetendo più esageratamente la variazione suddetta)</em> Così... o così? Come preferisci?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Preferisco... tutti e due i modi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piegando le braccia con aria seria seria)</em> E come farò, adesso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Come farai che cosa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Come farò a decidermi? <em class="italics">(Sedendo di proposito)</em> Io resto qui finchè non avrò deciso come debbo <span class="invisible pageno target" title="93" id="page-93"></span>portare il cappello. <em class="italics">(Si alza.)</em> Ah! Ecco un'idea luminosa. <em class="italics">(Si toglie il cappello e s'avvicina a Carlo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Che fai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Zitto, Fuffino mio. <em class="italics">(Gli mette il cappello in capo.)</em> Vedi, bisogna pensare col proprio capo, ma guardare i cappelli sul capo altrui.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(graziosamente)</em> Santa pazienza!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(contemplandolo)</em> Dà a me questa sigaretta: è una stonatura. <em class="italics">(Prende la sigaretta e fuma, aggiustando in varie maniere il cappello sul capo di Carlo.)</em> Vediamo un po'. <em class="italics">(Lo contempla di nuovo.)</em> Bene! Benone! Ho trovato. <em class="italics">(Gli toglie il cappello e se lo rimette.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ora, posso accendere un'altra sigaretta?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Accendi pure. <em class="italics">(Guardandosi nello specchio)</em> Oh! precisamente!! A meraviglia!... <em class="italics">(Andandosene)</em> Sicchè, a stasera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="94" id="page-94"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, a stasera, carina.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scambia il mozzicone della sigaretta, che ha fra le labbra, con quella intera che ha in bocca Carlo, dicendogli con civetteria e con un accento bambinesco:)</em> Questa a me, e questa a te.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Cioè, a me un mozzicone....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Tu sai che le mie labbra... sarebbero capaci di ridurre in cenere una sigaretta ogni minuto secondo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Cielo, ti ringrazio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Di che?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Di non essere una sigaretta. Del resto, tu mi fumi lo stesso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mentre, ridendo, sta per partire, s'arresta)</em> Oh! <em class="italics">(Desolata, mostra un piede)</em> Fuffino, non vedi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="95" id="page-95"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Un piede.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Un bottone mi ha tradita. Aggiusta tu.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(inginocchiandosi per abbottonare lo stivalino)</em> Tradimento momentaneo. Il bottone è al suo posto, e non bisogna che farlo rientrare nell'occhiello. Rientrerà, rientrerà. Dice un poeta: <em class="italics">(declamando)</em></p>
+        <blockquote class="small">
+          <div>
+            <div class="line-block outermost">
+              <div class="line">
+                Non abbandona un cuore il cuor gemello;
+              </div>
+              <div class="line">
+                non abbandona il suo botton l'occhiello!
+              </div>
+            </div>
+          </div>
+        </blockquote>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardando il capo di Carlo, in tono d'allarme)</em> Fuffino!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Lasciami lavorare....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Un capello bianco! <em class="italics">(Pausa.)</em> È come l'argento!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(senza darle retta)</em> Questo diavolo di bottone è più impertinente di quanto pareva.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="96" id="page-96"></span><span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Fuffino, me lo piglio io questo capello?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(borbotta e non le bada, mentre ella s'accinge a tirargli il capello bianco)</em> Ah, perbacco! È caparbio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tirandogli il capello, trionfalmente)</em> È fatta! Te l'ho strappato! <em class="italics">(Se lo avvolge al dito.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi, tutto compunto, col bottone in mano)</em> E te l'ho strappato anch'io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Ecco come vanno le cose del mondo: io faccio ritardare d'un capello la tua vecchiezza e tu fai accelerare... d'un bottone la vecchiezza dei miei stivalini!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Taci, taci, per carità! <em class="italics">(Mettendole la mano sulla bocca)</em> Non filosofare!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè, Fuffino, perchè debbo tacere?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="97" id="page-97"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(solennemente)</em> Perchè se il mio capello è d'argento, il tuo silenzio è d'oro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(allegramente)</em> Ora, poi, me ne vado davvero.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">A rivederci, Fifì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sulla soglia della porta di destra)</em> Un bacetto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(dandoglielo)</em> Un bacetto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">E mi vuoi sempre bene?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Semprissimo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi vuoi bene più di otto giorni fa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di otto giorni fa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="98" id="page-98"></span><span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di ieri sera?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di ieri sera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(incalzante)</em> Più di stamane?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di stamane.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di domani?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Più di domani.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh!?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Cioè, no!... Vedi che mi fai dire? Oggi, meno di domani, domani più di oggi. Che diamine! Sono cose che si capiscono.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Ora va bene, ora va bene. <em class="italics">(Va via, ridendo festosamente, mentre Carlo la segue con lo sguardo, buttandole baci con la punta delle dita.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-ii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="99" id="page-99"></span>SCENA II.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="carlo-solo-poi-francesco">CARLO <em class="italics">solo. Poi</em> FRANCESCO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(chiudendo la porta)</em> Carina... ma cretina! Cioè, cretino io... ovvero, cretini tutti e due. <em class="italics">(Prende di su la scrivanietta una bottiglia di Cognac e due bicchierini e ripone tutto sopra una mensola.)</em> Ecco una specie di barometro della galanteria da scapolo. <em class="italics">(Riprende la bottiglia e, contemplandola)</em> Dopo un tête-à-tête, guardando i cerchietti di cristallo d'una bottiglia di Cognac, si può sapere in che condizione si trovi l'atmosfera della galanteria. Qui mancano due sole prese di Cognac. Il liquido è molto su: atmosfera pesante. Il barometro segna: noia. <em class="italics">(Mentre ripone, sbadigliando, la bottiglia sulla scrivanietta, sente picchiare.)</em> Oh! una visita fuori programma. Chi sarà mai? <em class="italics">(Va ad aprire la porta a destra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(comparisce con in mano molte valige.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Chi vedo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Eh! sono qui. <em class="italics">(Posa le valige.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma bravo! Che bella sorpresa!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="100" id="page-100"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Bella... più di no che di sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E perchè poi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè io non vengo soltanto a farti una visita. Io vengo a depositare in casa tua....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Le valige?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Qualche cosa di più!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">La tua persona?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Qualche cosa di più: una conquista!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Tanto meglio! Ma bada: questa non è precisamente la mia casa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Non me ne affliggo, purchè possa diventare, provvisoriamente, la casa mia. Ma, a proposito, non ti ho sempre scritto, indirizzando le lettere qui?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="101" id="page-101"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Naturale. Io, qui, in questo grazioso bugigattolo, ricevo lettere, e ricevo... intendi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Intendo: è il tuo bureau... d'affari. Sicchè, cattivo soggetto, ti ho lasciato scapolo, e, dopo tre anni, ti ritrovo, benchè ammogliato, più scapolo di prima. E di tua moglie, che io non ho il piacere di conoscere, che ne è?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">È lontana! Separazione completa e definitiva per incompatibilità di carattere....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">E di attribuzioni. Poverina!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Sai... qualche mia scappatella.... Ma non parliamo di ciò, adesso. Parlami piuttosto di te e della tua conquista, e dimmi se persisti nell'idea di depositarmi... non so che cosa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Persisto. Fra qualche minuto... ella è qui.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Qui?... Ed io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="102" id="page-102"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh, non ti preoccupare! Ho pensato a tutto. Tu te ne andrai.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Molto bene!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Amico mio, finalmente ho saputo che cosa significa un'avventura di viaggio. Avevo sempre creduto che le avventure di viaggio fossero una rèclame bugiarda delle società ferroviarie, e non ci avevo mai prestato fede; ma ora....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Raccontami... raccontami....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(emozionato)</em> Raccontarti? È impossibile! Figurati la stazione di Genova....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Me la figuro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entusiasmato)</em> I vagoni, la vaporiera, i facchini e il resto....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(secondandolo)</em> E il resto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="103" id="page-103"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Nel primo scompartimento d'un vagone entro io. Due donne sono entrate prima di me: una sui sessant'anni....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Era lei?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">No. L'altra dai trenta ai quindici anni, o viceversa. Questa era lei. «Scusi — mi dice — questo scompartimento è riservato alle signore». «Sì, ma non si dia pena — rispondo io — . Benchè riservato alle signore, io ci starò bene lo stesso».... Non ci ridi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ridendo per convenienza)</em> Ah, ah, ah!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Grazie. Ella ha riso come te. E dice un proverbio arabo: «donna che ride, mezzo conquistata.» Insomma, la vecchia borbottava in tedesco, ed io non aveva l'obbligo di capire, la giovane continuava a ridere in italiano, il capo treno accettava un biglietto di scusa cosmopolita... da dieci lire; e sono restato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Che cosa avvenne durante il viaggio?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="104" id="page-104"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Niente! Neanche un'occhiata incoraggiante, neanche una parolina che m'avesse lasciato sperare. Non c'era mica da meravigliarsene. Io pensavo: in uno scompartimento riservato, non ci possono essere che delle signore riservate. Carina anche questa, eh?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E la conquista?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Un momento. Quando il treno è giunto alla stazione di Roma, mentre un facchino prendeva la roba di lei e la roba mia, mettendo le mie valige a contatto delle sue, io le ho chiesto se avesse bisogno dei miei servigi....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ella ha risposto di sì?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Oibò! Ella ha risposto di no. Ma quando le ho offerto la mia carta di visita, sulla quale, con un lapis, avevo segnato l'indirizzo della tua dimora, dove già contavo di piombare, la mia bella incognita — perchè era ed è ancora per me un'incognita — si è sentita presa da una subitanea passione per me. Evidentemente, il mio nome è stato per lei irresistibile. I suoi occhi hanno avuto sguardi <span class="invisible pageno target" title="105" id="page-105"></span>voluttuosamente intensi, le sue mani hanno più e più volte strette le mie e.... «A rivederci, signore» — m'ha detto con effusione — «A rivederci al più presto possibile. Anzi, fra pochi minuti, io verrò a farvi una visita.» Era commossa, nervosa, eccitata. Io, che vuoi? pure essendo un po' abituato a queste cose, ho sentito un groppo alla gola, e sono rimasto lì, senza nemmeno ringraziarla. Soltanto, quando lei, dolcemente, mi ha soggiunto: «mi riceverete?», io le ho risposto....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Che le hai risposto?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">«Vi adoro»!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E lei?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(come se dicesse una cosa naturale e perfettamente lusinghiera per lui)</em> Lei se n'era già andata!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma verrà certamente?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh, se verrà! Il cuore non m'inganna: quella donna mi ama, e sono innamorato anch'io, sai, <span class="invisible pageno target" title="106" id="page-106"></span>sono innamorato sul serio. Oh! la ferrovia fa dei miracoli in fatto d'amore. La velocità stessa del treno affretta gli avvenimenti. Si vede una donna alla stazione di Genova, la si ama alla stazione di Spezia, la si adora alla stazione di Roma. Se si continuasse il viaggio insieme sino a Napoli, si giungerebbe alla stazione di Napoli o troppo presto o troppo tardi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E quando non si continua il viaggio sino a Napoli....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Si va in casa d'un amico e gli si dice....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">«Va a passeggiare....»</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Nè più nè meno.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scherzosamente)</em> E sta bene. <em class="italics">(Si mette il cappello.)</em> Me ne vado. <em class="italics">(Consegnandogli la stanza.)</em> Questa, come vedi, è una stanza unica, ma molto comoda. <em class="italics">(Con significato di circostanza, quasi mostrandogli i divani, il paravento, ecc.)</em> È una stanza, insomma, piena di comfort. Ci sono due porte. Una di qui, <em class="italics">(a destra)</em> porta ufficiale, l'altra di <span class="invisible pageno target" title="107" id="page-107"></span>là <em class="italics">(a sinistra)</em>, valvola di sicurezza. Ti raccomando. A rivederci. Io ritornerò....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(vorrebbe dire qualche cosa.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Non temere. Quando la finestra sarà aperta... significherà che io potrò ritornare. Restiamo intesi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Restiamo intesi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Buona fortuna!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con compiacenza e ostentata modestia)</em> Eh!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(esce dalla porta a sinistra; quindi, prima di chiudere l'uscio, facendo capolino)</em> Ti occorre altro?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">No, grazie. Il resto l'ho con me.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(se ne va.)</em></p>
+      </div>
+      <div class="level-3 section" id="scena-iii">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="108" id="page-108"></span>SCENA III.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="francesco-solo-poi-bianca">FRANCESCO <em class="italics">solo. Poi</em> BIANCA.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(girando per la stanza)</em> Vediamo un po'. Non c'è che dire, è proprio quello che ci voleva. Intanto, giacchè ce n'è il tempo, completiamo la persona elegante che abbiamo abbozzata nella stanza di toilette della stazione. <em class="italics">(Si pettina, si appunta i baffi, si spolvera, si profuma, si guarda nello specchio. È molto soddisfatto di sè.)</em> Pih! non c'è male. Così, a occhio e croce, sono... non toccherebbe a me il dirlo, ma, via, sono belloccio. <em class="italics">(Si picchia alla porta a destra.)</em> È lei! Eppure, non ho provato mai tanta emozione. <em class="italics">(Tutto affaccendato e perplesso, va verso la porta e s'accorge d'avere ancora una spazzola in mano.)</em> Uh! la spazzola! <em class="italics">(Si confonde, come se nella stanza non trovasse dove mettere la spazzola. Sta per cacciarsela in saccoccia, quindi si decide a posarla sul mobile che è più lontano dalla porta. Infine, delicatissimamente, apre l'uscio.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(entra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(commosso, le prende le due mani con effusione frenata)</em> Ma è proprio vero?... Voi... siete venuta?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardando intorno e sforzandosi di sembrare gentile e amorevole verso Francesco)</em> Mi pare di sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="109" id="page-109"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con una certa vanitosa soddisfazione)</em> Sicchè... il vostro contegno durante il viaggio non era una manifestazione d'indifferenza.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con mal celata timidezza)</em> Oh! tutt'altro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(fra sè, mentre ella è assorta nella curiosa contemplazione del salotto)</em> Evidentemente, non è una cocotte, è semplicemente una donna leggera.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Che salottino profumato!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Infatti, sì. Vi dispiace il profumo? Vi dispiace di trovarvi qui?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Anzi!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre insinuante)</em> Volete levarvi il cappello e il mantello?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma.... <em class="italics">(Continua a guardare attorno.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="110" id="page-110"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con languore, seducendola)</em> Coraggio! In fondo, non si tratta che d'aver coraggio....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(risoluta)</em> Oh, non dubitate, ce n'ho del coraggio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Meno male. Vuol dire che non vi faccio paura. E perchè poi farvi paura? Tanto più che se voi, bella e strana signora, vorrete serbare l'incognito, io, fede di gentiluomo, sarò ben lieto di rispettarlo ciecamente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Non v'interessa di sapere chi sono io?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">So che siete bella, so che siete qui, sola, vicino a me, so che qui vi ha condotta il presentimento di trovare in me l'uomo capace di comprendervi e di amarvi!... Il resto non m'importa. Sedete, sedetemi accanto. <em class="italics">(Prendendola per una mano, la conduce sin presso un divano.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(siede di malavoglia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sedendo anche lui)</em> Parliamo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="111" id="page-111"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, parlate. <em class="italics">(Preoccupata, continua a guardare intorno, poi, levandosi e allontanandosi)</em> Io vi ascolto tanto volentieri.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Se vi allontanate da me, non potrò fare che un soliloquio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sforzandosi di essere gentile)</em> Ma io non v'impedisco di seguirmi. <em class="italics">(Andando di qua e di là, guarda i muri.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Veramente, preferirei un tête-à-tête meno peripatetico.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè, imbizzita)</em> È il laboratorio galante di quel mostro di mio marito. <em class="italics">(A Francesco, che è ancora seduto)</em> Vi ho detto che non v'impedisco di seguirmi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Facciamo a modo suo. <em class="italics">(A lei, seguendola)</em> Vi seguo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè, tormentandosi)</em> Ed è qui che gli spedivo le mie lettere d'affari!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="112" id="page-112"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Che guardate? che mormorate?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Non ho mai visto un salotto così.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Eppure, non c'è nulla di speciale.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">C'è tutto di speciale. Questo non è un salotto... onesto. Le donne che ci hanno lasciato qualche cosa sono innumerevoli!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> È gelosa, buon segno! <em class="italics">(A lei)</em> Può darsi che questo salotto non sia precisamente mio e che io alloggi qua, così, di passaggio, e che di tutte le donne, di cui voi vedete le tracce, io non ne conosca nessuna. <em class="italics">(Tra sè)</em> Bisogna lasciarla nel dubbio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(esaminando i ritratti)</em> Questo per esempio, è proprio il ritratto d'una ballerina!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(andando a guardare il ritratto)</em> Già!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="113" id="page-113"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(nervosissima)</em> Si vede dall'abito... che non ha. Ed è bellina, la sfacciata!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Non è una donna leggera, è semplicemente una donna bizzarra. <em class="italics">(A lei)</em> Non ci badate, cara. <em class="italics">(Prendendole una mano)</em> Io non conosco che voi, io non ho che un solo ritratto: il vostro... impresso nel cuore.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(continuando l'analisi, domanda con violenza)</em> E questa, perchè è vestita da uomo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Mah!... Probabilmente per provare le emozioni dell'altro sesso!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(col tono di chi non si lascia ingannare)</em> Ma è una donna! Oh, se lo è!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(indicando, col gesto, le forme abbondanti della donna fotografata)</em> Perbacco, se lo è!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">E c'è una dedica, «Al Carlino dei mio cuore».</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="114" id="page-114"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Lo vedete! Il Carlino non sono io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre cercando e guardando con una mal dissimulata ansia)</em> Oh! uno scarpino! <em class="italics">(Mettendolo sotto il muso di Francesco)</em> Questo è uno scarpino. <em class="italics">(È una elegante scarpettina da ballo, d'un microscopico piedino femminile.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con la convinzione di fare una scoperta)</em> E credo che sia uno scarpino... di donna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Se fosse d'un uomo, quest'uomo dovrebbe essere un lilliputto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Vi giuro che non ho nulla di comune con questo scarpino.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con rabbia)</em> È un ricordo!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Dei Paesi Bassi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardandone con disgusto la suola)</em> E qui c'è un'altra dedica. Si fa dedicare tutto, questo signore: <span class="invisible pageno target" title="115" id="page-115"></span>anche uno scarpino! Che dice? Non si legge bene. <em class="italics">(Mostrandolo a Francesco)</em> Leggete voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(interpretando)</em> No, non è una dedica: è un versetto biblico o quasi biblico. <em class="italics">(Leggendo:)</em> «Il piede sinistro non deve sapere quello che dà il piede destro!»</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(irritandosi)</em> E che cosa mai può dare il piede destro?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con l'analogo movimento d'una gamba, e timidamente)</em> Mio Dio, una pedata.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scoppiando)</em> Ma è un'indegnità! È un'infamia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sodisfatto, tra sè)</em> È gelosa. Come mi ama! <em class="italics">(A lei)</em> Calmatevi, via, calmatevi. E non continuate questo increscioso inventario. Non vi sembra che ci sia da fare qualche cosa di meglio? Tutta questa roba non è che tappezzeria.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre più commossa)</em> Ma è di quella tappezzeria che abitua a una vita molle, leggera, sciocca. <span class="invisible pageno target" title="116" id="page-116"></span>E chi non è avvezzo a vederla ne sente disgusto, nausea, schifo! <em class="italics">(Poi, risoluta)</em> Me ne voglio andare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Come mi ama! <em class="italics">(A lei)</em> Io vi garantisco che potete chetarvi, mia bella e bizzarra incognita. Guardatemi, guardatemi in viso....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gli volta le spalle, senza badargli punto.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Brava! Così! Non v'accorgete che sono innocente, e che... sono vostro?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Tutto questo sta bene; ma io me ne voglio andare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">No, rimanete. Astraetevi dall'ambiente che vi circonda.... Riconcentratevi in voi. Anzi, riconcentratevi in me.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scoprendo sopra una mensola il ritratto di Carlo)</em> Ah, quel ritratto lì....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ricomincia l'inventario!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="117" id="page-117"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pigliando il ritratto, e osservandolo con amarezza)</em>.... è un ritratto... completamente mascolino!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Quello di Carlo, ora. <em class="italics">(A lei)</em> Sì... questa volta, la persona fotografata, benchè sia pur essa vestita da uomo,... non è una donna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">È un mostro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Mostro mostro, no. Via, bruttino!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Bruttissimo! Uh!... Che muso! <em class="italics">(Sempre eccitata, fissando la fotografia)</em> Sì, avete ragione. Voglio restare. <em class="italics">(Smette precipitosamente il mantello.)</em> E voglio togliermi perfino....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Perfino?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Il cappello! <em class="italics">(Esegue.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Non è molto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="118" id="page-118"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">È moltissimo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con fatuità)</em> Moltissimo? <em class="italics">(Tra sè)</em> È fatta!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Io voglio restare, vi dico! Voglio restare.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma sì, ho capito! <em class="italics">(Tra sè)</em> Non è una donna bizzarra; è semplicemente un angelo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ripone la fotografia di Carlo sulla mensola, quindi va a sedere sul divano, quasi trascinando Francesco con finta dolcezza)</em> Venite, sedete vicino a me.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(inebriato)</em> Oh!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rialzandosi)</em> Un momento. <em class="italics">(Va a pigliare la fotografia di Carlo e la colloca sul mobile più vicino al divano, come per farla presenziare alle sue espansioni. Quindi, torna a sedere.)</em> Io sono qui per voi, soltanto per voi, e mi riconcentro in voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="119" id="page-119"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Raccontatemi tutto quello che è avvenuto in poche ore nel vostro cuoricino. Durante il viaggio, voi volevate vincere, volevate soffocare, non è vero?, quel non so che, dal quale vi sentivate presa per la mia persona.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Sicuro!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma era destino! Nel momento di separarci, io vi ho data la mia carta, col mio indirizzo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed io subito vi ho dato il mio cuore, senza il mio indirizzo....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed ora siete mia.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Vostra.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">In mio potere....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">In vostro potere....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="120" id="page-120"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">E avete fiducia in me?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(come se pensasse per la prima volta a qualche cosa)</em> Se ho fiducia in voi? Aspettate. <em class="italics">(Pausa. Lo guarda bene.)</em> Perchè no? Sì, ho fiducia in voi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(preoccupato e imbarazzato)</em> Ma scusate... che specie di fiducia?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">E... scusate, <em class="italics">(con furberia e sussiego)</em> quale fiducia voi credete di meritare?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Quella del gentiluomo: <em class="italics">(cambiando tono)</em> ma anche quella del....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a tempo)</em> Fermiamoci qui, fermiamoci a «gentiluomo».</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(accendendosi molto)</em> Ma questo gentiluomo ha un cuore che palpita e ha del sangue nelle vene. Questo gentiluomo sa intravvedere tutto un paradiso <span class="invisible pageno target" title="121" id="page-121"></span>inaspettato: e, intravvedutolo, non può, non vuole, non deve rinunziarvi. <em class="italics">(Eccitato, con intimità)</em> Se questo gentiluomo non picchiasse alla porta di quel paradiso, sarebbe o un ingrato o uno sciocco... <em class="italics">(afferrandole le mani)</em> ed io, mia bella, mia adorabile incognita, <em class="italics">(sta per abbracciarla con entusiasmo)</em> io picchio!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(alzandosi e dandogli uno schiaffo)</em> E picchio anch'io!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(portando la mano alla guancia)</em> Me ne sono accorto! <em class="italics">(Pausa. Poi, tra sè)</em> Non è un angelo, è semplicemente un dragone.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè, allontanandosi)</em> Se avessi saputo che, venendo in casa di mio marito, non avrei trovato... che il suo ritratto, certo non mi sarei arrischiata a scegliermi per istrumento di vendetta un viaggiatore così intraprendente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con solennità)</em> Signora, tutto è finito tra noi due!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">E le porte del paradiso?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi sono state chiuse sulla faccia con una certa violenza.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="122" id="page-122"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gentile)</em> Ma io vi offro....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(ansiosamente)</em> Mi offrite...?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Il purgatorio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sarebbe?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">La mia amicizia. Vi si può entrare senza aver bisogno di picchiare. Basta una buona stretta di mano. <em class="italics">(Esegue.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Vada pel purgatorio! <em class="italics">(Borbotta a mezza voce:)</em> Il purgatorio dell'oggi dovrebbe essere il paradiso del domani. Speriamo! <em class="italics">(A lei, forte:)</em> Ma, dunque, chi siete?... chi siete?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(col proposito di non rispondergli)</em> Di grazia, il mio cappello e il mio mantello dove sono?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tutto affaccendato e confuso)</em> Li cerco.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="123" id="page-123"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sul tavolinetto, trova, intanto, un piccolo portafogli. Lo prende e mormora:)</em> Un portafoglino femminile! <em class="italics">(Lo apre, ne trae una carta di visita e legge:)</em> Fifì Bandinelli. <em class="italics">(Tra sè)</em> L'indegno! Ma troverà invece il mio portafogli. <em class="italics">(Sostituisce con il suo il portafogli trovato, che conserva.)</em> Provi un po' quel che ho provato io. E mi servirà anche di pretesto per tornare! <em class="italics">(A Francesco, che ha cercato e preso il mantello e il cappello)</em> Il mio mantello, il mio cappello, subito....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sono qui. <em class="italics">(Aiutandola a mettere l'uno e l'altro)</em> Ecco quello che io mi domando. Chi siete? Un enigma? Un rebus? Una sciarada?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Appunto. Una sciarada. Una sciarada che potete offrire all'acume di... tutti i vostri amici: il primo ama, il secondo perdona, l'intero ritorna.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">È una sciarada a premio?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Chi sa! Dipende dallo scioglitore. A rivederci....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Permettete che v'accompagni sino alla porta del cortile? Siete venuta, è vero, di nascosto; ma potete andarvene, ahimè, palesemente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="124" id="page-124"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Il vostro braccio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Un momentino. <em class="italics">(Corre a spalancare la finestra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Fate bene ad aprire la finestra.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè, in questo salotto destinato alle conquiste, dopo il nostro abboccamento, c'era bisogno di rinnovare un po' l'aria.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tornando a lei)</em> Il mio braccio è ai vostri ordini.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(accettando)</em> Mi dispiace, per altro, d'incomodarvi. Dovete essere molto stanco....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sulla soglia)</em> Veramente, non c'è di che!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Escono.)</span>
+          </div>
+        </div>
+      </div>
+      <div class="level-3 section" id="scena-iv">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="125" id="page-125"></span>SCENA IV.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="carlo-poi-francesco">CARLO, <em class="italics">poi</em> FRANCESCO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(facendo capolino dalla porta a sinistra, chiama:)</em> Francesco! Francesco! Oh! È andato via anche lui! <em class="italics">(Entra, guardando intorno, con l'aria di credere che in quella stanza non si è mica detto il rosario.)</em> Nessuna traccia. Un po' di disordine nei ninnoli e nei ritratti, e niente altro. <em class="italics">(Sorpreso)</em> Il mio ritratto sull'orlo... d'un precipizio, forse!... Veramente, avrebbero potuto lasciarmi in pace. <em class="italics">(Vede il portafogli.)</em> Un portafoglino dimenticato.... Che sia quello di Fifì? È tanto stordita! <em class="italics">(Lo apre, legge un biglietto di visita, trasalisce, impallidisce.)</em> Bianca Tebaldi! Com'è possibile? <em class="italics">(Profondamente scosso)</em> Ma sì: lei, lei! Qui... con... <em class="italics">(Inorridendo)</em> È una combinazione raccapricciante! <em class="italics">(Riflette)</em> Eppure, non è una combinazione. Ella sapeva l'indirizzo di questa casa, perchè è qui che io ricevo le sue lettere d'affari. Ed è venuta qui per un convegno galante! Ah, è orribile, è orribile!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entrando, nota il suo turbamento e gli dice:)</em> Ohè, che hai?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Niente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Come niente? Hai una certa faccia....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="126" id="page-126"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ho un po' di mal di capo. <em class="italics">(Toccandosi naturalmente la fronte)</em> Non ci badare. <em class="italics">(Con forzata disinvoltura)</em> Ebbene?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mortificato, ma non volendo confessare il fiasco)</em> Ebbene?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">Prosit.</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti ringrazio. Ma lasciamo andare....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Insomma, dimmi, uomo fortunato, uomo irresistibile: come sono andate le cose? Benone, eh?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, benone....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sussultando e fingendo gaiezza)</em> A vele gonfie?... E sei giunto in porto sano e salvo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sano, <em class="italics">(ricordandosi dello schiaffo)</em> via, per miracolo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="127" id="page-127"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Perbacco, una donna assai facile! Il colloquio... è stato tanto breve!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Breve, <em class="italics">(toccandosi la guancia)</em> ma... sentito.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Molta vivacità.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Molta.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Su! Sentiamo i particolari.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(evitando)</em> Un'altra volta: ora sono ancora troppo commosso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Diamine! Sei vecchio del mestiere!... Ma come! Sei commosso davvero? Questa... donnina ti ha proprio stregato?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi ha... stregato.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E... ti ama?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="128" id="page-128"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi ama... a modo suo... si capisce. Non tutte le donne amano allo stesso modo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con ansia raffrenata)</em> E in che modo ti ama? Dimmi, dimmi!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Non so spiegartelo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">È appassionata? è altera? è alla mano?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">È alla mano: precisamente.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Piacente, graziosa, elegante?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh, quanto a questo, è insuperabile! Un bocconcino, amico mio! Ma,... basta....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Con le tue reticenze, mi dai sui nervi. Fuori, fuori i particolari.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="129" id="page-129"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sei un bel tipo. Non ti credere che si tratti d'una crestaina o d'una <em class="italics">cocotte</em> qualunque!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah no! E di chi si tratta?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Caro mio, ella ha serbato l'incognito; ma dev'essere una gran signora... di cervello un po' balzano, beninteso. Dev'essere una gran dama bisbetica, capricciosa...: qualche strana donna, maritata chi sa come, chi sa dove, chi sa con chi... Con un imbecille, di certo!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trattenendosi e secondandolo)</em> Sì sì!... Però, imbecille poi, perchè?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè un uomo che possiede una donna come quella lì, e la lascia passeggiare sola per il mondo, se non è proprio un imbecille nato, dev'essere un imbecille di carriera, o deve avere una gran voglia di diventarlo. Bisogna proprio essere un marito per avere di tali ambizioni. E se questo povero sventurato esiste....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Io dico di sì!...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="130" id="page-130"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Tanto meglio! Se, dunque, questo povero sventurato esiste, l'ha scappata bella!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">L'ha scappata bella? Sicchè non...?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Già, tu sai come sono le donne. Certe volte fanno la corsa dell'asino. Vanno, vanno, vanno, e poi, a un tratto, <em class="italics">tta</em>, si arrestano.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Lei... <em class="italics">tta</em>... si è arrestata?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Crederei di sì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scattando irritato)</em> Sì o no? <em class="italics">(Poi, frenandosi e fingendo di sorridere)</em> Scherzo. Eppure, ti confesso, sono curioso. Dunque, sì o no?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Giudica tu stesso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Oh! Di'! Da bravo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="131" id="page-131"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Smanie, spasimi, irrequietezze, ogni sorta di manifestazioni d'amore verbale, e gelosia, poi, senza fine. Figùrati una <em class="italics">Otella</em>! E... che so... le ho mostrato, per esempio, il tuo ritratto, per vedere che impressione le facesse un altro uomo a paragone di me... e....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Abbrevia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Tu, in complesso, sei una persona piuttosto simpatica....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Questo è vero, ma abbrevia!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ebbene, non avertelo a male: tu a paragone di me, le sei sembrato brutto.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Brutto addirittura?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Nè più nè meno che brutto! Insomma, era un crescendo che faceva sperare il più delizioso dei punti coronati....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="132" id="page-132"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">E invece?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Invece, il punto coronato è stato un... ceffone!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scoppiando in gioia)</em> Ah ah! Benissimo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti prego di moderare le esclamazioni!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Perchè m'irriti!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Per ora, racconta. T'irriterai dopo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Non ho più nulla d'importante da raccontare. Rasserenatasi alquanto, mi ha lasciato, affidandomi una certa sciarada da sciogliere.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Una sciarada?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="133" id="page-133"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">«Il primo ama, il secondo perdona, l'intero ritorna.»</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sempre più rianimandosi)</em> Ah! ritorna?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">E se son rose, fioriranno. <em class="italics">(Si sente picchiare alla porta di destra.)</em> Che sia proprio lei che ritorna?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Di già? <em class="italics">(Sta per aprire.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(trattenendolo)</em> Lascia andare me. Voglio prima domandare. Se è lei, non bisogna comprometterla. Tu sei qui.... Sarebbe una indelicatezza da parte mia il farla entrare. <em class="italics">(Si sente picchiare di nuovo.)</em> Eccomi. <em class="italics">(Con dolcezza)</em> Chi è?</p>
+      </div>
+      <div class="level-3 section" id="scena-v">
+        <h3 class="center level-3 pfirst section-title title with-subtitle"><span class="invisible pageno target" title="134" id="page-134"></span>SCENA V.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="bianca-francesco-carlo">BIANCA, FRANCESCO, CARLO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Sono io, sono io: la vostra incognita.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(rivolgendosi a Carlo)</em> Lei.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Lei!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Debbo aver dimenticato il mio portafogli.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Carlo)</em> È un pretesto per ritornare da me. <em class="italics">(A Bianca)</em> Sì, sì, grazie, grazie! capisco! Ma ora, mia adorabile incognita, non sono solo. È qui con me un mio amico. Voi conoscete la mia discrezione, e debbo rassegnarmi a non aprirvi le porte di quel paradiso che sapete. <em class="italics">(Tossisce per farsi capire.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Te lo do io il paradiso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Ma come si chiama il vostro amico?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="135" id="page-135"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(subito)</em> Si chiama Carlo Tebaldi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sicuro, si chiama Carlo Tebaldi.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Allora, non m'importa. Questo signore non lo conosco e non mi conosce. Non temo di essere compromessa. Aprite.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Quale imprudenza! Andate poi a dire che questa donna non mi ama. <em class="italics">(Apre.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(entra.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(le prende ambo le mani.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo e Bianca</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(si scambiano occhiate di rabbia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(all'orecchio di Bianca, con mellifluità)</em> Io non so se voi abbiate lasciato davvero qui il vostro portafogli, ma, in ogni caso, per giustificare la vostra venuta, io fingerò di cercarlo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="136" id="page-136"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(nervosa e frettolosa)</em> Più tardi. Per ora, vi prego, fate la presentazione.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Vi presento il mio intimo amico: Carlo Tebaldi, giovane ammogliato, che è....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(interrompendolo stizzosamente)</em>... celibe.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Un ammogliato celibe è un bel fatto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah! celibe?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(aspettando il compimento della presentazione, a Francesco)</em> E la signora?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">La signora... <em class="italics">(Facendo dei cenni a Bianca, come per domandarle che cosa debba dire)</em> Come devo?...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Quanto al cognome, non vi date pena. Quello che porto è un po'... discreditato. E quanto al nome, datemene uno a piacere.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="137" id="page-137"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Celeste!!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Bianca.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, preferisco Bianca.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Vada per Bianca.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ragazza? maritata? vedova?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Così così.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma non le pare che ci siamo conosciuti un'altra volta,... non so dove?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Diamine, diamine!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(fingendo di ricordarsi)</em> No... a me non pare: anzi, certamente no.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="138" id="page-138"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ah, è vero: quella lì era un'altra. Un po' di rassomiglianza nei lineamenti, nel portamento, nella voce; ma poi, nel resto, tutta diversa.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Meno male. <em class="italics">(Forte)</em> Intanto, cerchiamo questo portafogli.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(avvicinandosi a Bianca)</em> Ma credo d'averlo trovato io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(soddisfatta)</em> Ah?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">È stato dimenticato proprio qui. <em class="italics">(Mostrandolo)</em> È questo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Precisamente. Sa, in certi momenti, quando la testa gira....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Cara!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Ognuno può disperdere....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="139" id="page-139"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Un portafogli compromettente. E quando la testa non gira, ognuno può ritrovarlo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Tanto vero, che io, quando la testa non girava, ne ho ritrovato uno, con cui, senza volere, ho scambiato il mio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(seguendo ingenuamente la conversazione)</em> Oh, vedete che combinazione!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Davvero?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(mostrandolo)</em> Eccolo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè, seccato)</em> Il portafogli di Fifì!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Non si turbi. Il documento più importante contenuto in questo portafogli non è che qualche biglietto di visita d'una donna. La donna dei suoi pensieri, forse?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="140" id="page-140"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(punto)</em> No. <em class="italics">(Con stizza)</em> Semplicemente una donna da avventure.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(atteggiandosi a ingenua)</em> In verità, non capisco...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(piano a Carlo, tirandolo per la giacca)</em> Bada a quello che dici!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Bianca)</em> Non capisce? È giusto. Mi spiegherò: le donnine da avventure... sono, come si direbbe in gergo commerciale, degli articoli a buon mercato. Ce n'è per tutti i gusti. Io, per esempio, vivo qui, a Roma, solo, annoiato; ed ecco che mi procuro una donnina che mi serva da antidoto alla noia: articolo per salottino da scapolo. Al mio amico, invece, piace di viaggiare, ed egli, naturalmente, si procura degli articoli da viaggio.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(scattando)</em> Ma questo è troppo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Carlo!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Bianca)</em> Non le va?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="141" id="page-141"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Carlo)</em> Tu sei un insolente! <em class="italics">(A Bianca, cercando di rimediare)</em> Non gli date retta. Il mio amico si compiace di mostrarsi più cinico di quanto veramente non sia. E voi, che siete, soprattutto, una donna di spirito, vorrete perdonarlo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(disinvolta)</em> Di che? Perchè? Un salottino come questo non mi dà il diritto di pretendere un'accoglienza diversa da quella concessa alle ballerine, che ne illustrano le pareti. Del resto, un salottino di tal genere, se non garantisce il rispetto, garantisce in compenso il mistero. E l'animo mio fu profetico. <em class="italics">(A Francesco)</em> Difatti, ricordate voi che durante il viaggio io... vi amavo, è vero, ma vi amavo... senza farvene accorgere?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Verissimo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">E dite. <em class="italics">(Richiamando su questo particolare l'attenzione di Carlo)</em> Quand'è che mi risolvetti ad amarvi diversamente?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Quando vi diedi il mio nome e il mio indirizzo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">L'indirizzo di questa casa....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="142" id="page-142"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(gioendo, tra sè)</em> Ora comincio a capire.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Ebbene... gli è che, profeticamente, io rinunziavo al rispetto <em class="italics">(sempre sottolineando)</em> e mi accaparravo il mistero!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Cara, cara, cara! <em class="italics">(Tra sè)</em> Andate poi a dire che questa donna non mi ama!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Ho torto io.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Carlo)</em> A proposito: lei signor... signor Tebaldi, vuole riprendere il portafogli della sua... della sua... come ho da dire?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Me lo dia pure, ma non dica nulla: direbbe certamente una malignità.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Glielo restituisco immacolato. Badi: è vuoto, perfettamente vuoto! e forse, <em class="italics">(con intenzione maliziosa)</em> è stato qui dimenticato... non senza uno scopo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="143" id="page-143"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ed ecco il suo. Non è vuoto, ma credo che nemmeno esso sia stato qui dimenticato... senza una scopo.</p>
+        <p class="pnext"><em class="italics">(Si scambiano i portafogli con esagerata e ostentata gentilezza; quindi, di scatto, si allontanano l'uno dall'altra con violenza e sgarbo.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(tra sè)</em> Antipatia reciproca. Meglio così!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Si sente picchiare alla porta.)</span>
+          </div>
+        </div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(forte)</em> Chi è che batte?</p>
+      </div>
+      <div class="level-3 section" id="scena-vi">
+        <h3 class="center level-3 pfirst section-title title with-subtitle">SCENA VI.</h3>
+        <p class="center level-3 pfirst section-subtitle subtitle" id="fifi-bianca-carlo-francesco">FIFÌ, BIANCA, CARLO, FRANCESCO.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Batte la tua Fifì.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(imbarazzatissimo, fra sè)</em> Maledetta!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Mi pare d'aver lasciato sul tavolino il mio bel portafoglino. Apri, Fuffino. Ti farò anche un bacino.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="144" id="page-144"></span><span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(a Carlo)</em> <em class="italics">Ino ino ino!</em>... L'hai abituata al diminutivo?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(anche lei a Carlo)</em> Oh! non s'imbarazzi. Io non voglio disturbare nessuno. Faccia entrare. Faccia pure il suo comodo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Il suo <em class="italics">comodino</em>.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Apri, Fuffino, fa presto!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(guardando il paravento)</em> E per non offendere il pudore della signorina Fifì, nè quello di Fuffino, noi due <em class="italics">(accennando a Francesco)</em> ci nasconderemo dietro quel paravento.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Ottima idea! Noi due ci nasconderemo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(arrabbiato e sempre imbarazzato)</em> Ma no, non è necessario che vi nascondiate tutti e due. Tu <em class="italics">(a Francesco)</em> puoi restar qui.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="145" id="page-145"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Egoista. Mi annoierei a star sola lì dietro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Si annoierebbe.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Invece, in due, ci divertiremo un mondo. E lei, signor Fuffino, potrà trattenersi con l'oggetto del suo cuore. <em class="italics">(A Francesco con amore)</em> Non è vero?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Sì, tesoro.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(di fuori)</em> Non vuoi aprire, Fuffino?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Auff!... Vengo.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(eccitata dalla gelosia, afferrando Francesco violentemente per un braccio, lo tira verso il paravento)</em> Qui, qui, amor mio! <em class="italics">(A Carlo)</em> Questo paravento sarà la gran muraglia della Cina: insormontabile! Ogni coppia sarà libera....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">... e indipendente!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="146" id="page-146"></span><span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(sulle spine)</em> Non troppa indipendenza, sai! <em class="italics">(Si decide ad aprire.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(entrando)</em> Oh, finalmente! Perchè non aprivi? Che facevi?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Un bagno!... Sì, un bagno turco. Molto turco!</p>
+        <p class="pnext"><em class="italics">(In questa scena a quartetto, Francesco dà in ismanie d'amore, e Bianca finge di secondarlo, mentre, inquieta, stizzita, spia ed ascolta il colloquio tra Carlo e Fifì.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Ti ho fatto una bella sorpresa?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Bellissima!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Non mi sembri contento.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(si accalora, s'inginocchia, si alza, siede, gesticola. Se ne vedono la testa le braccia agitate.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Lasciatemi stare.... Non mi sento disposto....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="147" id="page-147"></span><span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Che cos'è quel <em class="italics">voi</em>?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Quel <em class="italics">voi</em> è un <em class="italics">voi</em> come tutti i <em class="italics">voi</em>. <em class="italics">(Cerca di guardare ciò che accade dietro il paravento.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Fuffino mio bello, perchè mi tratti così? <em class="italics">(Fa per dargli un bacio ed egli si scansa.)</em> Non lo vuoi un bacino?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Questo è il portafogli che avete dimenticato. <em class="italics">(Glie lo porge.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(pigliandolo)</em>.... E dàgli col <em class="italics">voi</em>, Fuffino!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma che Fuffino d'Egitto! Non lo capite che ho bisogno di star solo?!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Mi mandi via?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(quasi con bontà, per non irritarla)</em> No, non ti mando via....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="148" id="page-148"></span><span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(per rappresaglia, s'intenerisce con Francesco.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(continuando)</em> Bensì, ti prego d'andartene!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Ma quando ci rivedremo qui?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Qui, mai più!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">E allora, dove?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Nella Valle di Giosafatte.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(con serietà e con buona fede)</em> Io non ci sono mai stata. Dammi l'indirizzo preciso.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Cerca nella <em class="italics">Guida</em>.</p>
+        <p class="pnext"><em class="italics">(A questo punto, dietro il paravento, Francesco, nel tentativo di un suo slancio troppo audace, è respinto da Bianca con energia e rotola giù, arrovesciato. Se ne vedono a terra il torace e la testa fuori del paravento.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="invisible pageno target" title="149" id="page-149"></span><span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="pfirst">Insomma, mi licenzii senza neanche darmi questo indirizzo?! Sta benissimo!,.. Addio! <em class="italics">(Va verso la porta. Sulla soglia, apre il portafogli e, trovandolo vuoto com'era, esclama a Carlo, minacciosa:)</em> Ma faremo i conti!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Senza l'oste.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Fifì</span>
+          </div>
+        </div>
+        <p class="center pfirst"><em class="italics">(va via.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(facendo capolino dietro il paravento)</em> Partita? <em class="italics">(Slanciandosi freneticamente al collo di Carlo)</em> Ed ora, il bacio te lo do io. <em class="italics">(Gli dà un gran bacio sulla guancia.)</em></p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(al colmo della meraviglia)</em> Ohè, ohè! Che vuol dire ciò?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Bianca</span>
+          </div>
+        </div>
+        <p class="pfirst">Vuol dire che la sciarada è sciolta, e il premio è dato. Il primo ama, il secondo perdona, l'intero ritorna....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Ritorna a essere quello che era. <em class="italics">(A Francesco)</em> <span class="invisible pageno target" title="150" id="page-150"></span>Ho l'onore di presentarti Bianca Tebaldi, mia moglie.</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(comprendendo a poco a poco e trasalendo, prorompe in tre esclamazioni crescenti:)</em> Ah!... Aah!... Aaaah!....</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Che ti viene?</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst"><em class="italics">(cascando sopra una seggiola)</em> Un accidente!... <em class="italics">(Poi, subito, ricomponendosi ed alzandosi:)</em> <em class="italics">Pardon!</em> Signora ben lieto di...</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Carlo</span>
+          </div>
+        </div>
+        <p class="pfirst">Sicchè, quel tale marito, sai, quel marito imbecille... ero io!</p>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="small-caps">Francesco</span>
+          </div>
+        </div>
+        <p class="pfirst">Va là! Comincio a persuadermi che, per fare la carriera dell'imbecille, <em class="italics">(accennando a sè stesso)</em> non è indispensabile essere... un marito.</p>
+        <div class="vspace" style="height: 2em"></div>
+        <div class="center line-block noindent outermost">
+          <div class="line">
+            <span class="italics">(Sipario.)</span>
+          </div>
+        </div>
+        <div class="vspace" style="height: 5em"></div>
+        <div class="backmatter"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
